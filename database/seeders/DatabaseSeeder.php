@@ -23,5 +23,11 @@ class DatabaseSeeder extends Seeder
                 Version::factory(2)->create();
             });
         });
+
+        $this->call([
+            CommentSeeder::class,
+            TypeSeeder::class,
+            VehicleSeeder::class,
+        ]);
     }
 }
